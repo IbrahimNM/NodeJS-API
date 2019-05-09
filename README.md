@@ -1,4 +1,4 @@
-# NodeJS-API
+# NodeJS Simple REST-API
 
 ## How to run the server:
 1. Run the app.js script:
