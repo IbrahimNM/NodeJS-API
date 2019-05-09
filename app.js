@@ -7,8 +7,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/info", (req, res) => {
-  var ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
-  console.log(ip);
   res.send("This page contains all the information you need.");
 });
 
