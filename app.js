@@ -20,18 +20,18 @@ app.get("/info", (req, res) => {
   // Displat useful msg for server admin
   console.log("/info has been called with a " + req.method + " request.");
   // Response to caller
-  res.send("This page contains all the information you need.");
+  res.send("Information about this API has been returned.");
 });
 
 /**
  * '/data' endpoint declearaiton.
  * It allows only POST requests.
  * */
-app.post("/data", (req, res) => {
+app.post("/student", (req, res) => {
   // Displat useful msg for server admin
-  console.log("/data has been called with a " + req.method + " request.");
+  console.log("/student has been called with a " + req.method + " request.");
   // Response to caller
-  res.send("New data has been added.");
+  res.send("New student was created");
 });
 
 /**
