@@ -27,7 +27,7 @@ app.get("/info", (req, res) => {
  * '/data' endpoint declearaiton.
  * It allows only POST requests.
  * */
-app.post("/student", (req, res) => {
+app.post("/students", (req, res) => {
   // Displat useful msg for server admin
   console.log("/student has been called with a " + req.method + " request.");
   // Response to caller
