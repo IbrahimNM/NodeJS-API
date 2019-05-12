@@ -19,8 +19,12 @@ app.get("/", (req, res) => {
 app.get("/info", (req, res) => {
   // Displat useful msg for server admin
   console.log("/info has been called with a " + req.method + " request.");
+  // specify content type
+  res.setHeader("Content-Type", "application/json");
   // Response to caller
-  res.send("Information about this API has been returned.");
+  res.send(
+    JSON.stringify({ text: "Information about this API has been returned." })
+  );
 });
 
 /**
@@ -30,6 +34,8 @@ app.get("/info", (req, res) => {
 app.post("/students", (req, res) => {
   // Displat useful msg for server admin
   console.log("/student has been called with a " + req.method + " request.");
+  // Specify content type.
+  res.setHeader("Content-Type", "text/plain");
   // Response to caller
   res.send("New student was created");
 });
