@@ -9,6 +9,9 @@ const port = 3000;
 app.get("/", (req, res) => {
   // Displat useful msg for server admin
   console.log("/ has been called with a " + req.method + " request.");
+  // Specify content type.
+  res.setHeader("Content-Type", "text/plain");
+  // Response to caller
   res.send("Welcome to the Home Page!");
 });
 
@@ -21,7 +24,7 @@ app.get("/info", (req, res) => {
   console.log("/info has been called with a " + req.method + " request.");
   // specify content type
   res.setHeader("Content-Type", "application/json");
-  // Response to caller
+  // Response to caller with JSON
   res.send(
     JSON.stringify({ text: "Information about this API has been returned." })
   );
